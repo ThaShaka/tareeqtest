@@ -47,7 +47,7 @@ header {
     position: fixed;
     z-index: 5;
     width: 100%;
-    background: var(--prim-color);
+    background: transparent;
     color: var(--sec-color);
 
 
