@@ -33,9 +33,8 @@ a {
     &.active {
         border-bottom: 3px solid white;
     }
-    &.active.notHp {
-        border-bottom: 3px solid var(--prim-color);
-    }
+
+
 }
 
 .josefin {
@@ -373,6 +372,10 @@ footer {
     animation: textGoBye forwards 1s;
 }
 
+.changeBorder {
+    animation: changeBorderColor forwards 100ms;
+}
+
 @keyframes slideIn {
     0% {
         translate: 0 100%;
@@ -402,6 +405,13 @@ footer {
         color: var(--prim-color);
         background:var(--sec-color);
     }
+}
+
+@keyframes changeBorderColor {
+    100% {
+        border-bottom: 2px solid var(--prim-color);
+    }
+
 }
 
 @keyframes changeBtnColor {
