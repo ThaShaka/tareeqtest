@@ -189,7 +189,7 @@ article.heroText {
     position: absolute;
     inset: 0;
     translate: 0 -1000%;
-    min-height: 100vh;
+    height: 730px;
     padding-top: 118px;
     background: var(--sec-color);
     overflow: hidden;
