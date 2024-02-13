@@ -51,7 +51,10 @@ header {
     color: var(--sec-color);
 
 
+
+
     .header-wrap {
+        z-index: 25;
         padding: 2em 0;
         width: 93%;
         margin: 0 auto;
@@ -59,6 +62,16 @@ header {
         justify-content: space-between;
         align-items: center;
         gap: 4em;
+        position: relative;
+        .bg {
+            position: absolute;
+            inset: 0;
+            width: 55%;
+            height: 118px;
+            background: var(--prim-color);
+            z-index: -1;
+        }
+
 
         > a {
             color: black;
