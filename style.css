@@ -373,7 +373,7 @@ footer {
 }
 
 .changeBorder {
-    animation: changeBorderColor forwards 100ms;
+    animation: changeBorderColor forwards 2s;
 }
 
 @keyframes slideIn {
