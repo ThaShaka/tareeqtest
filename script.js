@@ -19,10 +19,12 @@ window.addEventListener("scroll", ()=> {
         document.querySelector(".features").classList?.add("slideIn")
         document.querySelector("#joinus").classList?.remove("changeBtnColorRev")
         document.querySelector("#joinus").classList?.add("changeBtnColor")
+        document.querySelector("header").classList?.remove("changeColorRev")
         document.querySelector(".active").classList?.add("changeBorder")
 
     } else {
         document.querySelector("header").classList?.remove("changeColor")
+        document.querySelector("header").classList?.add("changeColorRev")
         document.querySelector("#joinus").classList?.remove("changeBtnColor")
         document.querySelector("#joinus").classList?.add("changeBtnColorRev")
         document.querySelector(".active").classList?.remove("changeBorder")

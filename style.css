@@ -221,7 +221,7 @@ article.heroText {
     position: sticky;
     inset: 0;
     translate: 0 calc(1% * (max(var(--scroll), 10) - var(--scroll)) * 10 );
-    transition: translate 0.3s ease-in-out;
+    transition: translate 0.7s ease-in;
     background: var(--sec-color);
 }
 
@@ -377,17 +377,17 @@ footer {
     }
 }
 
-.fixed {
-    position : fixed;
-    inset: 0;
-}
 
 .slideIn {
-    animation: slideIn linear 1s;
+    animation: slideIn ease-in 1s;
 }
 
 .changeColor {
-    animation: changeColor forwards 1s;
+    animation: changeColor forwards 1s ease-in;
+}
+
+.changeColorRev {
+    animation: changeColorRev forwards 1s ease-in;
 }
 
 .changeBtnColor {
@@ -395,7 +395,7 @@ footer {
 }
 
 .changeBtnColorRev {
-    animation: changeBtnColor 1s linear reverse backwards;
+    animation: changeBtnColorRev 1s ease-in forwards;
 }
 
 .textGoBye {
@@ -467,6 +467,19 @@ footer {
     }
 }
 
+@keyframes changeColorRev{
+
+
+    0% {
+        color: var(--prim-color);
+        background:var(--sec-color);
+    }
+    100% {
+        color: var(--sec-color);
+        background: transparent;
+    }
+}
+
 @keyframes changeBorderColor {
     100% {
         border-bottom: 2px solid var(--prim-color);
@@ -481,6 +494,18 @@ footer {
     }
 
     100% {
+        background: var(--prim-color);
+        color: var(--sec-color);
+    }
+}
+
+@keyframes changeBtnColorRev {
+    1000% {
+        color: black;
+        background: var(--sec-color);
+    }
+
+    0% {
         background: var(--prim-color);
         color: var(--sec-color);
     }
