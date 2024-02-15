@@ -3,6 +3,7 @@
 :root {
     --prim-color: #24CCA8;
     --sec-color: #FFF;
+    --scroll : 0;
 }
 
 * {
@@ -13,8 +14,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    position: relative;
     color: white;
-    &
+    min-height: 101vh;
 }
 
 .joinNotHp {
@@ -34,7 +36,6 @@ a {
         border-bottom: 3px solid white;
     }
 
-
 }
 
 .josefin {
@@ -44,13 +45,20 @@ a {
 
 header {
     position: fixed;
-    z-index: 5;
+    z-index: 10;
     width: 100%;
     background: transparent;
     color: var(--sec-color);
 
-
-
+    .bg {
+        position: absolute;
+        inset: 0;
+        width: 65%;
+        height: 118px;
+        transition: opacity 1s;
+        background: var(--prim-color);
+        z-index: -1;
+    }
 
     .header-wrap {
         z-index: 25;
@@ -62,15 +70,6 @@ header {
         align-items: center;
         gap: 4em;
         position: relative;
-        .bg {
-            position: absolute;
-            inset: 0;
-            width: 51%;
-            height: 118px;
-            background: var(--prim-color);
-            z-index: -1;
-        }
-
 
         > a {
             color: black;
@@ -105,12 +104,20 @@ header {
     }
 }
 
-main.homePage {
-    overflow: hidden;
+.sections {
+    height: 200vh;
     position: relative;
+
+}
+
+
+main.homePage {
+    position: sticky;
     padding-top: 118px;
     background: var(--prim-color);
     margin: 0 auto;
+    overflow-x: hidden;
+    inset: 0;
 
     .homePageWrap {
         width: 93%;
@@ -196,15 +203,26 @@ article.heroText {
     }
 }
 
-.features {
-    z-index: 4;
+.observer {
     position: absolute;
-    inset: 0;
-    translate: 0 -1000%;
-    height: 730px;
-    padding-top: 118px;
-    background: var(--sec-color);
+    top: 65%;
+    height: 250px;
+    width: 100%;
+    z-index: -1;
+}
+
+.features {
+    display: flex;
+    place-items: center;
+    z-index: 4;
+    padding-top: 120px;
     overflow: hidden;
+    height: 100vh;
+    position: sticky;
+    inset: 0;
+    translate: 0 calc(1% * (max(var(--scroll), 10) - var(--scroll)) * 10 );
+    transition: translate 0.3s ease-in-out;
+    background: var(--sec-color);
 }
 
 .rect {
@@ -213,6 +231,17 @@ article.heroText {
     top: 8%;
     z-index: -1;
     transform: scale(1.2, 1.1);
+}
+
+.nextText {
+    position: absolute;
+    inset: 0;
+    translate: 0 300%;
+}
+
+.initalText {
+    position: relative;
+
 }
 
 .featuresWrap {
@@ -234,16 +263,11 @@ article.heroText {
             margin-left: 3rem;
         }
         
-        .nextText {
-            position: absolute;
-            inset: 0;
-            translate: 0 1000%;
-        }
     }
     .featuresTextWrap::before {
         content: '';
         position: absolute;
-        inset: 0;
+       top: 0;
         width: 5px;
         background: var(--prim-color);
         height: 100%;
@@ -274,6 +298,7 @@ section.featuresWrap {
 footer {
     padding: 1.5em 5em;
     background: #0F172A;
+    z-index: 10;
 
     .footerTop {
 
@@ -352,46 +377,81 @@ footer {
     }
 }
 
-.slideIn {
-    animation: slideIn forwards 2s;
+.fixed {
+    position : fixed;
+    inset: 0;
 }
 
-.slideIn2 {
-    animation: slideIn forwards 2s 400ms;
+.slideIn {
+    animation: slideIn linear 1s;
 }
 
 .changeColor {
-    animation: changeColor forwards 2s;
+    animation: changeColor forwards 1s;
 }
 
 .changeBtnColor {
-    animation: changeBtnColor forwards 2s;
+    animation: changeBtnColor forwards 1s ease-in;
+}
+
+.changeBtnColorRev {
+    animation: changeBtnColor 1s linear reverse backwards;
 }
 
 .textGoBye {
-    animation: textGoBye forwards 1s;
+    animation: textGoBye linear forwards 0.5s;
+}
+
+.textGoByeRev {
+    animation: textGoByeRev linear forwards 0.5s;
 }
 
 .changeBorder {
-    animation: changeBorderColor forwards 2s;
+    animation: changeBorderColor forwards 1s;
+}
+
+.fadeTextIn {
+    animation: textFadeIn linear 0.5s forwards;
+}
+
+.fadeTextInRev {
+    animation: textFadeInRev linear 0.5s forwards ;
+}
+
+
+
+@keyframes textFadeIn {
+    80% {
+        translate: 0 30px;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes textFadeInRev {
+    0% {
+    translate: 0 0;
+    }
+    10% {
+        translate: 0 -30px;
+    }
+    100% {
+        translate: 0 260%;
+    }
 }
 
 @keyframes slideIn {
     0% {
-        translate: 0 100%;
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
+        transform: translateY(0);
     }
 
     60% {
-        translate: 0 -20px;
+        transform: translateY(-30px);
     }
 
     100% {
-        translate: 0 0;
+        transform: translateY(0);
     }
 }
 
@@ -436,6 +496,20 @@ footer {
     }
 
     100% {
+        translate: 0 -250%;
+    }
+}
+
+@keyframes textGoByeRev {
+    100% {
+        translate: 0 0;
+    }
+
+    80% {
+        translate: 0 40px;
+    }
+
+    0% {
         translate: 0 -250%;
     }
 }
