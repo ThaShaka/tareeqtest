@@ -5,6 +5,7 @@ window.addEventListener("resize", setScrollVar)
 function setScrollVar() {
     const htmlElement = document.documentElement;
     const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight
+    console.log(percentOfScreenHeightScrolled*100)
     htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled*100, 100).toString())
 }
 
@@ -21,6 +22,7 @@ window.addEventListener("scroll", ()=> {
         document.querySelector("#joinus").classList?.add("changeBtnColor")
         document.querySelector("header").classList?.remove("changeColorRev")
         document.querySelector(".active").classList?.add("changeBorder")
+        document.querySelector(".active").classList?.remove("changeBorderRev")
 
     } else {
         document.querySelector("header").classList?.remove("changeColor")
@@ -28,13 +30,13 @@ window.addEventListener("scroll", ()=> {
         document.querySelector("#joinus").classList?.remove("changeBtnColor")
         document.querySelector("#joinus").classList?.add("changeBtnColorRev")
         document.querySelector(".active").classList?.remove("changeBorder")
+        document.querySelector(".active").classList?.add("changeBorderRev")
         document.querySelector(".bg").style.visibility="1"
     }
 })
 
 const observer = new IntersectionObserver(entries=> {
     const textDiv = entries[0];
-    const footer = entries[1]
     if(textDiv.isIntersecting ) {
         document.querySelector(".initalText").classList?.add("textGoBye")
         document.querySelector(".initalText").classList?.remove("textGoByeRev")
@@ -49,7 +51,6 @@ const observer = new IntersectionObserver(entries=> {
 })
 
 observer.observe(document.querySelector(".observer"))
-observer.observe(document.querySelector("footer"))
 
 
 

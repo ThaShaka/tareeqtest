@@ -105,9 +105,9 @@ header {
 }
 
 .sections {
-    height: 200vh;
+    height: 200dvh;
     position: relative;
-
+    margin-bottom: 80px;
 }
 
 
@@ -230,8 +230,9 @@ article.heroText {
     right: 0;
     top: 8%;
     z-index: -1;
-    transform: scale(1.2, 1.1);
+
 }
+
 
 .nextText {
     position: absolute;
@@ -258,7 +259,7 @@ article.heroText {
         }
 
         p {
-            width: 45%;
+            width: 55%;
             line-height: 160%;
             margin-left: 3rem;
         }
@@ -410,6 +411,10 @@ footer {
     animation: changeBorderColor forwards 1s;
 }
 
+.changeBorderRev {
+    animation: changeBorderColorRev forwards 1s;
+}
+
 .fadeTextIn {
     animation: textFadeIn linear 0.5s forwards;
 }
@@ -468,8 +473,6 @@ footer {
 }
 
 @keyframes changeColorRev{
-
-
     0% {
         color: var(--prim-color);
         background:var(--sec-color);
@@ -481,8 +484,21 @@ footer {
 }
 
 @keyframes changeBorderColor {
+    0% {
+        border-bottom: 2px solid var(--sec-color);
+    }
     100% {
         border-bottom: 2px solid var(--prim-color);
+    }
+
+}
+
+@keyframes changeBorderColorRev {
+    0% {
+        border-bottom: 2px solid var(--prim-color);
+    }
+    100% {
+        border-bottom: 2px solid var(--sec-color);
     }
 
 }
