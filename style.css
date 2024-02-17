@@ -461,6 +461,10 @@ footer {
 }
 
 @keyframes changeColor{
+    0% {
+        color: var(--sec-color);
+        background: transparent;
+    }
 
     100% {
         color: var(--prim-color);
@@ -469,6 +473,10 @@ footer {
 }
 
 @keyframes changeColorRev{
+    0% {
+        color: var(--prim-color);
+        background: #fff;
+    }
 
     100% {
         color: var(--sec-color);
