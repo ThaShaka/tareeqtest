@@ -5,7 +5,6 @@ window.addEventListener("resize", setScrollVar)
 function setScrollVar() {
     const htmlElement = document.documentElement;
     const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight
-    console.log(percentOfScreenHeightScrolled*100)
     htmlElement.style.setProperty("--scroll", Math.min(percentOfScreenHeightScrolled*100, 100).toString())
 }
 
@@ -13,7 +12,6 @@ window.addEventListener("scroll", ()=> {
 
     const htmlElement = document.documentElement;
     const percentOfScreenHeightScrolled = (htmlElement.scrollTop / htmlElement.clientHeight)*100
-    console.log(percentOfScreenHeightScrolled)
     if(Math.round(percentOfScreenHeightScrolled)> 10) {
         document.querySelector("header").classList?.add("changeColor")
         document.querySelector(".bg").style.opacity="0"
