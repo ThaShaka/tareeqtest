@@ -105,9 +105,8 @@ header {
 }
 
 .sections {
-    height: 200dvh;
+    min-height: 200dvh;
     position: relative;
-    margin-bottom: 80px;
 }
 
 
@@ -215,9 +214,10 @@ article.heroText {
     display: flex;
     place-items: center;
     z-index: 4;
-    padding-top: 120px;
+    padding-top: 140px;
     overflow: hidden;
     height: 100vh;
+    padding-bottom: 20px;
     position: sticky;
     inset: 0;
     translate: 0 calc(1% * (max(var(--scroll), 10) - var(--scroll)) * 10 );
@@ -461,10 +461,6 @@ footer {
 }
 
 @keyframes changeColor{
-    0% {
-        color: var(--sec-color);
-        background: transparent;
-    }
 
     100% {
         color: var(--prim-color);
@@ -473,10 +469,7 @@ footer {
 }
 
 @keyframes changeColorRev{
-    0% {
-        color: var(--prim-color);
-        background:var(--sec-color);
-    }
+
     100% {
         color: var(--sec-color);
         background: transparent;
