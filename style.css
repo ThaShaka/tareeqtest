@@ -220,7 +220,7 @@ article.heroText {
     padding-bottom: 20px;
     position: sticky;
     inset: 0;
-    translate: 0 calc(1% * (max(var(--scroll), 10) - var(--scroll)) * 10 );
+    translate: 0 calc(1% * (max(var(--scroll), 10) - var(--scroll)) * 15 );
     transition: translate 0.7s ease-in;
     background: var(--sec-color);
 }
