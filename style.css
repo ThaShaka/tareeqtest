@@ -4,6 +4,7 @@
     --prim-color: #24CCA8;
     --sec-color: #FFF;
     --scroll : 0;
+    --section-width: 87%
 }
 
 * {
@@ -59,7 +60,7 @@ header {
     .header-wrap {
         z-index: 25;
         padding: 2em 0;
-        width: 85%;
+        width: var(--section-width);
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -71,7 +72,8 @@ header {
             color: black;
             background: var(--sec-color);
             border-radius: 30px;
-            padding: 10px 1.8em;
+            padding: 10px 1.5em;
+            font-size: 20px;
             font-weight: bold;
             &:hover {
                 filter: brightness(80%);
@@ -80,13 +82,9 @@ header {
         }
     }
 
-
     a {
-        font-size: 1.2rem;
         color: inherit;
     }
-
-
 
     nav {
         display: flex;
@@ -96,7 +94,7 @@ header {
     }
 
     h1 {
-        font-size: 2.8rem;
+        font-size: 40px;
         font-weight: bold;
     }
 }
@@ -112,11 +110,12 @@ main.homePage {
     padding-top: 118px;
     background: var(--prim-color);
     margin: 0 auto;
+    min-height: 100vh;
     overflow-x: hidden;
     inset: 0;
 
     .homePageWrap {
-        width: 85%;
+        width: var(--section-width);
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -248,18 +247,18 @@ article.heroText {
 
     .featuresTextWrap {
         position: relative;
-        margin-left: 2rem;
 
         h1 {
-            font-size: 3rem;
+            font-size: 48px;
             margin-left: 3rem;
             margin-bottom: 2rem;
         }
 
         p {
-            width: 55%;
+            width: 60%;
             line-height: 160%;
             margin-left: 3rem;
+            font-size: 18px;
         }
         
     }
@@ -276,7 +275,8 @@ article.heroText {
 
 section.featuresWrap {
     display: flex;
-    width: 93%;
+    width: var(--section-width);
+    justify-content: space-around;
     margin: 0 auto;
     align-items: center;
 
@@ -289,7 +289,7 @@ section.featuresWrap {
         margin-right: 3rem;
         flex: 3;
         img {
-            max-width: 350px;
+            max-width: 310px;
         }
     }
 }
@@ -377,7 +377,7 @@ footer {
             gap: 15px;
             align-items: center;
             ion-icon {
-                font-size: 1.5rem;
+                font-size: 24px;
             }
         }
     }
@@ -393,11 +393,11 @@ footer {
 }
 
 .changeColorRev {
-    animation: changeColorRev forwards 1s ease-in;
+    animation: changeColorRev forwards 1s ease-in 100ms;
 }
 
 .changeBtnColor {
-    animation: changeBtnColor forwards 1s ease-in;
+    animation: changeBtnColor forwards 1s ease-in 100ms;
 }
 
 .changeBtnColorRev {
@@ -413,7 +413,7 @@ footer {
 }
 
 .changeBorder {
-    animation: changeBorderColor forwards 1s;
+    animation: changeBorderColor forwards 1s 100ms;
 }
 
 .changeBorderRev {

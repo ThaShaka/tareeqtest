@@ -28,7 +28,6 @@ window.addEventListener("scroll", ()=> {
         if(document.querySelector("#joinus").classList.contains('changeBtnColor')) document.querySelector("#joinus").classList?.add("changeBtnColorRev")
         document.querySelector(".active").classList?.remove("changeBorder")
         if(document.querySelector('.active').classList.contains('changeBorder'))document.querySelector(".active").classList?.add("changeBorderRev")
-        document.querySelector(".bg").style.visibility="1"
     }
 })
 
