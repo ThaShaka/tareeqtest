@@ -301,7 +301,7 @@ section.featuresWrap {
 }
 
 footer {
-    padding: 1.5em 5em;
+    padding: 1.5em 7em;
     background: #0F172A;
     z-index: 10;
 
@@ -309,7 +309,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 6em;
+        gap: 4em;
 
         h1 {
             font-size: 2.2rem;
@@ -318,7 +318,7 @@ footer {
         nav {
             align-items: center;
             display: flex;
-            gap: 30px;
+            gap: 3.5em;
         }
 
         > a {
@@ -342,7 +342,7 @@ footer {
         display: flex;
         justify-content: space-between;
         width: 65%;
-        gap: 20px;
+        gap: 10px;
 
         article {
             display: flex;
