@@ -160,7 +160,7 @@ article.heroImage img{
 article.heroText {
     color: var(--sec-color);
     display: grid;
-    gap: 0.5rem;
+    gap: 0.2rem;
     padding-bottom: 60px;
 
     h1 {
@@ -169,11 +169,15 @@ article.heroText {
 
     h2 {
         font-size: 40px;
+        margin-bottom: 10px;
     }
 
     p {
-        width: 60%;
+        width: 70%;
         line-height: 160%;
+        &.josefin {
+            margin-top: 15px;
+        }
     }
 
     a {
