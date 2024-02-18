@@ -37,7 +37,8 @@ a {
 
 .josefin {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.8rem;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 header {
