@@ -194,8 +194,8 @@ article.heroText {
     }
 
     &.foot img {
-        height: 35px;
-        max-width: 105px;
+        height: 40px;
+        max-width: 125px;
     }
 }
 
@@ -313,6 +313,7 @@ footer {
 
         h1 {
             font-size: 2.2rem;
+            font-weight: bold;
         }
 
         nav {
@@ -326,8 +327,8 @@ footer {
             background: var(--sec-color);
             border-radius: 30px;
             padding: 10px 1.8em;
-            font-size: 1.2rem;
-            font-weight: bold;
+            font-size: 20px;
+            font-weight: 500;
 
             &:hover {
                 filter: brightness(80%);
@@ -350,11 +351,12 @@ footer {
             gap: 20px;
 
             a {
-                font-weight: 300;
+                font-weight: 400;
+
             }
 
             .footHeading {
-                font-weight: 400;
+                font-weight: 500;
             }
         }
     }
