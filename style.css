@@ -19,10 +19,6 @@ body {
     min-height: 101vh;
 }
 
-.joinNotHp {
-    background: var(--prim-color);
-    color: var(--sec-color);
-}
 
 img {
     width: 100%;
@@ -63,7 +59,7 @@ header {
     .header-wrap {
         z-index: 25;
         padding: 2em 0;
-        width: 93%;
+        width: 85%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -76,6 +72,7 @@ header {
             background: var(--sec-color);
             border-radius: 30px;
             padding: 10px 1.8em;
+            font-weight: bold;
             &:hover {
                 filter: brightness(80%);
             }
@@ -105,7 +102,7 @@ header {
 }
 
 .sections {
-    min-height: 200dvh;
+    min-height: 300dvh;
     position: relative;
 }
 
@@ -119,7 +116,7 @@ main.homePage {
     inset: 0;
 
     .homePageWrap {
-        width: 93%;
+        width: 85%;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -167,11 +164,11 @@ article.heroText {
     padding-bottom: 60px;
 
     h1 {
-        font-size: 6.5rem;
+        font-size: 5.2rem;
     }
 
     h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     p {
@@ -180,9 +177,10 @@ article.heroText {
     }
 
     a {
-        font-size: 1.4rem;
+        margin-top: 15px;
+        font-size: 1.2rem;
         text-decoration: underline;
-        font-weight: bold;
+        font-weight: 500;
         cursor: pointer;
     }
 }
@@ -204,7 +202,7 @@ article.heroText {
 
 .observer {
     position: absolute;
-    top: 80%;
+    top: 85%;
     height: 250px;
     width: 100%;
     z-index: -1;
@@ -220,7 +218,7 @@ article.heroText {
     padding-bottom: 20px;
     position: sticky;
     inset: 0;
-    translate: 0 calc(1% * (max(var(--scroll), 10) - var(--scroll)) * 15 );
+    translate: 0 calc(1% * (max(var(--scroll), 15) - var(--scroll)) * 20 );
     transition: translate 0.7s ease-in;
     background: var(--sec-color);
 }
@@ -296,20 +294,25 @@ section.featuresWrap {
     }
 }
 
+#reqDemo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 footer {
     padding: 1.5em 5em;
     background: #0F172A;
     z-index: 10;
 
     .footerTop {
-
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 4em;
+        gap: 6em;
 
         h1 {
-            font-size: 1.9rem;
+            font-size: 2.2rem;
         }
 
         nav {
@@ -323,6 +326,7 @@ footer {
             background: var(--sec-color);
             border-radius: 30px;
             padding: 10px 1.8em;
+            font-size: 1.2rem;
             font-weight: bold;
 
             &:hover {
@@ -334,11 +338,11 @@ footer {
 
 
     .footerNav {
-        margin: 1em 0;
+        margin: 1.3em 0;
         display: flex;
         justify-content: space-between;
         width: 65%;
-        gap: 30px;
+        gap: 20px;
 
         article {
             display: flex;
@@ -350,12 +354,13 @@ footer {
             }
 
             .footHeading {
-                font-weight: bold;
+                font-weight: 400;
             }
         }
     }
 
     .footerEnd {
+        margin-top: 40px;
         display: flex;
         padding: 1rem 0;
         justify-content: space-between;
