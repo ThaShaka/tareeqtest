@@ -24,11 +24,11 @@ window.addEventListener("scroll", ()=> {
 
     } else {
         document.querySelector("header").classList?.remove("changeColor")
-        document.querySelector("header").classList?.add("changeColorRev")
+       if(document.querySelector('header').classList.contains('changeColor')) document.querySelector("header").classList?.add("changeColorRev")
         document.querySelector("#joinus").classList?.remove("changeBtnColor")
-        document.querySelector("#joinus").classList?.add("changeBtnColorRev")
+        if(document.querySelector('#joinus').contains('changeBtnColor'))document.querySelector("#joinus").classList?.add("changeBtnColorRev")
         document.querySelector(".active").classList?.remove("changeBorder")
-        document.querySelector(".active").classList?.add("changeBorderRev")
+        if(document.querySelector('.active').contains('changeBorder'))document.querySelector(".active").classList?.add("changeBorderRev")
         document.querySelector(".bg").style.visibility="1"
     }
 })
