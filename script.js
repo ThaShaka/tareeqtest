@@ -27,7 +27,7 @@ window.addEventListener("scroll", ()=> {
        if(document.querySelector('header').classList.contains('changeColor')) document.querySelector("header").classList?.add("changeColorRev")
         if(document.querySelector("#joinus").classList.contains('changeBtnColor')) document.querySelector("#joinus").classList?.add("changeBtnColorRev")
         document.querySelector(".active").classList?.remove("changeBorder")
-        if(document.querySelector('.active').contains('changeBorder'))document.querySelector(".active").classList?.add("changeBorderRev")
+        if(document.querySelector('.active').classList.contains('changeBorder'))document.querySelector(".active").classList?.add("changeBorderRev")
         document.querySelector(".bg").style.visibility="1"
     }
 })
